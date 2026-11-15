@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Farmácia Vida · Atendimento</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: { tinta: "#17302F", pinho: "#0E6B63", giz: "#EEF3F1", rotulo: "#F4D35E" },
+        fontFamily: { titulo: ["Bricolage Grotesque", "sans-serif"], corpo: ["Figtree", "sans-serif"] }
+      } }
+    };
+  </script>
+</head>
+<body class="min-h-screen bg-giz font-corpo text-tinta antialiased flex items-center justify-center p-0 sm:p-6">
+  <main class="flex h-screen w-full max-w-2xl flex-col overflow-hidden bg-white sm:h-[44rem] sm:rounded-3xl sm:shadow-xl">
+
+    <header class="flex items-center gap-3 bg-pinho px-6 py-5 text-white">
+      <div class="grid h-11 w-11 place-items-center rounded-xl bg-rotulo text-2xl font-bold text-tinta" aria-hidden="true">+</div>
+      <div>
+        <h1 class="font-titulo text-xl font-bold leading-tight">Farmácia Vida</h1>
+        <p class="text-sm text-white/80">Tire dúvidas sobre preços, horários e entrega</p>
+      </div>
+    </header>
+
+    <section id="mensagens" class="flex-1 space-y-3 overflow-y-auto px-5 py-6" aria-live="polite">
+      <div class="max-w-[85%] rounded-2xl rounded-bl-sm border-l-4 border-rotulo bg-giz px-4 py-3">
+        Olá! Sou o assistente da Farmácia Vida. Pergunte algo ou escolha uma opção abaixo.
+      </div>
+    </section>
+
+    <div id="sugestoes" class="flex flex-wrap gap-2 px-5 pb-3">
+      {% for s in sugestoes %}
+      <button type="button" data-sugestao="{{ s }}"
+        class="rounded-full border border-pinho/30 px-3 py-1.5 text-sm text-pinho transition hover:bg-pinho hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pinho">
+        {{ s }}
+      </button>
+      {% endfor %}
+    </div>
+
+    <form id="form" class="flex gap-2 border-t border-tinta/10 p-4" autocomplete="off">
+      <label for="entrada" class="sr-only">Sua mensagem</label>
+      <input id="entrada" type="text" maxlength="300" placeholder="Digite sua pergunta..."
+        class="flex-1 rounded-xl border border-tinta/20 px-4 py-3 outline-none focus:border-pinho focus:ring-2 focus:ring-pinho/30 disabled:bg-giz">
+      <button id="enviar" type="submit"
+        class="rounded-xl bg-pinho px-6 py-3 font-semibold text-white transition hover:bg-tinta focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pinho disabled:opacity-50">
+        Enviar
+      </button>
+    </form>
+  </main>
+
+  <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+</html>

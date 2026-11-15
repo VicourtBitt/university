@@ -1,0 +1,13 @@
+[
+  {"perguntas": ["Tudo bem?", "Oi", "Olá", "Bom dia", "Boa tarde"], "resposta": "Sim, tudo ótimo! Como posso ajudar você hoje?"},
+  {"perguntas": ["Qual o horário de funcionamento?", "Que horas vocês abrem?", "Até que horas vocês ficam abertos?"], "resposta": "Funcionamos de segunda a sábado, das 8h às 22h, e aos domingos das 9h às 18h.", "sugerir": true},
+  {"perguntas": ["Quanto custa o Aerolin?", "Preço do Aerolin"], "resposta": "O Aerolin custa R$29,00.", "sugerir": true},
+  {"perguntas": ["Quanto custa a Dipirona?", "Preço da Dipirona"], "resposta": "A Dipirona 500mg (10 comprimidos) custa R$7,50."},
+  {"perguntas": ["Quanto custa o Paracetamol?", "Preço do Paracetamol"], "resposta": "O Paracetamol 750mg (20 comprimidos) custa R$12,90."},
+  {"perguntas": ["Vocês fazem entrega?", "Tem delivery?"], "resposta": "Sim! Entregamos em toda a cidade em até 40 minutos. Pedidos acima de R$50,00 têm frete grátis.", "sugerir": true},
+  {"perguntas": ["Preciso de receita para comprar antibiótico?", "Quais remédios precisam de receita?"], "resposta": "Sim. Antibióticos e medicamentos controlados só são vendidos mediante apresentação de receita médica."},
+  {"perguntas": ["Quais formas de pagamento vocês aceitam?", "Aceitam cartão?", "Aceitam Pix?"], "resposta": "Aceitamos dinheiro, Pix, cartões de débito e crédito (em até 3x sem juros).", "sugerir": true},
+  {"perguntas": ["Qual o endereço da farmácia?", "Onde vocês ficam?"], "resposta": "Estamos na Av. Brasil, 1234, Centro, Passo Fundo - RS."},
+  {"perguntas": ["Qual o telefone de contato?", "Qual o WhatsApp?"], "resposta": "Nosso telefone e WhatsApp é (54) 3333-0000."},
+  {"perguntas": ["Sair", "Tchau", "Encerrar"], "resposta": "Obrigado por utilizar nosso sistema!", "encerrar": true}
+]
